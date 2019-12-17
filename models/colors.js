@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const ColorSchema = new Schema({
   name: String,
-  color: { rgb:[ Number ]}
+  color: { hex:[ string ]}
 });
 
 const Color = mongoose.model('color', ColorSchema);
