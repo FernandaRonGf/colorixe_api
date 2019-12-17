@@ -25,8 +25,9 @@ const PORT = process.env.PORT;
  app.use(cors(), express.json());
 
  //User
-const { createUser, getUserById } = require('./controllers/user')
+const { createUser, getUserById , UploadImage} = require('./controllers/user')
 app.post('/new/user', createUser);
+app.post('/upload', UploadImage);
 app.get('/user/id', getUserById);
 
 //Palletes 

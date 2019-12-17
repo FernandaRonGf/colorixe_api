@@ -31,8 +31,8 @@ exports.UploadImage = (req, res) => {
   let params = req.body;
   let Image = Photo({
     img: {
-      data: data.params,
-      contenType: contenType.params
+      data: params.data,
+      contenType: params.contenType
     }
   });
   Image.save((err, image) => {
