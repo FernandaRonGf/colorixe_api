@@ -29,13 +29,13 @@ exports.getUserById = (req, res) => {
 
 exports.UploadImage = (req, res) => {
   let params = req.body;
-  let Image = Photo({
+  let newImage = Photo({
     img: {
       data: params.data,
       contenType: params.contenType
     }
   });
-  Image.save((err, image) => {
+  newImage.save((err, image) => {
     err
       ? res.status(400).json({ message: "there was an error", err })
       : res.json({ image });
