@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const PalleteSchema = new Schema({
     title: String,
-    colors:[{ color:[String]}]
+    colors:{ color:[String]}
 
 });
 
