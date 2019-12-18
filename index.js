@@ -31,8 +31,9 @@ app.post('/upload', UploadImage);
 app.get('/user/id', getUserById);
 
 //Palletes 
-const { createPallete } = require( './controllers/pallete');
+const { createPallete, getPalleteList } = require( './controllers/pallete');
 app.post('/pallete', createPallete);
+app.get('/pallete-list', getPalleteList)
 
 
 //colors

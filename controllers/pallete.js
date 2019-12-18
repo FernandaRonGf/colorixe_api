@@ -14,3 +14,11 @@ exports.createPallete = (req, res) => {
       : res.status(201).json({ message: `${pallete} fue agregado con exito!` });
   });
 };
+
+exports.getPalleteList = (req, res) => {
+  Pallete.find().exec((err, colors) => {
+    err
+      ? res.status(400).json({ messages: "No se encontro listado" })
+      : res.json({ colors });
+  });
+};
